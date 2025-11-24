@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 const ProductCard = () => {
   const { fetchData, result } = fetchStore();
   const [searchTerm, setSearchTerm] = useState("");
-  const [filter, setFilter] = useState(""); // ⭐ NEW state for filter
+  const [filter, setFilter] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const ProductCard = () => {
       );
     }
 
-    // Sorting ⭐
+   
     if (filter === "high-low") {
       products.sort((a, b) => b.price - a.price);
     } else if (filter === "low-high") {
@@ -34,13 +34,12 @@ const ProductCard = () => {
     }
 
     return products;
-  }, [result, searchTerm, filter]); // ⭐ include filter
+  }, [result, searchTerm, filter]); 
 
   return (
     <div>
       <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
-      {/* Sorting Dropdown */}
       <div className="min-w-screen flex justify-end">
         <select
           className="border p-2 rounded"
