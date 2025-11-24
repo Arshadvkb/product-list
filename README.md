@@ -1,15 +1,22 @@
-## PRODUCT LIST
+# PRODUCT LIST
 
-# TECH STACK
+## TECH STACK
  - React
  - vite
  - javascript
  - tailwind
 
-# PACKAGES
+## PACKAGES
 - react-router-dom
 - axios
 - zustand
+
+## TOPICS COVERD
+- Fetch data from a public api
+- Search item by name 
+- filter by price 
+- state manged using zustand
+- passing id through props
 
 ## SETUP
 ```
